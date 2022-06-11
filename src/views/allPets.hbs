@@ -1,0 +1,24 @@
+
+<h1 class="main">New Friends Available For Adoption</h1>
+<div class="flex-container">
+    {{#each petList}}
+    <div >
+        <div class="inline-grid">
+            <div class="inline-item">
+                <img class="petpic" src="{{imgURL}}" width="250" height="375" alt=""/>
+            </div>
+            <div class="inline-item">
+                
+                <h2>{{petName}}</h2>
+                <a class="a" href="/pet/{{petId}}">View Details</a><br>
+                <a class="a" href="/pet/edit/{{petId}}">Edit Details</a><br><br>
+                <form action="/pet/delete/{{petId}}" method="POST">
+                    <button class="button2" type="submit">Delete Item</button>
+                </form><br>
+               
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+<button class="button1" onclick="window.location.href ='/pet/add'">Add A Pet</button>

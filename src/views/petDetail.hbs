@@ -1,0 +1,9 @@
+{{#with foundPet}}
+    <img class="petpic" src="{{imgURL}}" width="250" height="375" alt=""/>
+    <h2>{{petName}}</h2>
+    <p>Secret Life: {{secretLife}}</p>
+    <p>{{description}}</p><br>
+
+    <button class="button3" onclick="window.location.href ='/pet'">Go Back</button>
+    <button class="button1" onclick="window.location.href ='/pet/edit/{{petId}}'">Edit Pet</button>
+{{/with}}

@@ -1,0 +1,25 @@
+<h1 class="main">Edit Pet's Details</h1>
+{{#with foundPet}}
+<form action='/pet/edit/{{petId}}' method="POST">
+    <label for="petName">Enter Friend's Name: </label>
+    <input type="text" name="petName" value="{{petName}}"/><br><br>
+
+    <label for="imgURL">Enter Image URL:</label>
+    <input type="text" name="imgURL" value="{{imgURL}}"/><br><br>
+
+    <label for="description">Enter Item Description: </label>
+    <input type="text" name="description" value="{{description}}"/><br><br>
+
+    <label for="secretLife">Enter Secret Life: </label>
+    <input type="text" name="secretLife" value="{{secretLife}}"/><br><br>
+
+    <button class="button1"type="submit">Edit Pet</button><br><br>
+</form>
+
+    <form action="/pet/delete/{{petId}}" method="POST">
+        <button class="button2" type="submit">Delete Pet</button>
+    </form><br>
+
+    <button class="button3" onclick="window.location.href ='/pet'">Go Back</button><br>
+
+{{/with}}
